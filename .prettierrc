@@ -1,0 +1,13 @@
+{
+  "semi": true,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ]
+}
