@@ -7,6 +7,7 @@ export const StyledButton = styled.button<Omit<CircleButtonProps, 'children' | '
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   width: ${({ size }) => (size === 'large' ? 120 : 90)}px;
   height: ${({ size }) => (size === 'large' ? 120 : 90)}px;
   background-color: ${({ view }) => (view === 'primary' ? `${theme.colors.primary}` : 'transparent')};

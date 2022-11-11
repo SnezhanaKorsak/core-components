@@ -7,9 +7,10 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'children' | 'ref'>>
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   background-color: transparent;
   border: none;
-  border-radius: ${theme.borderRadius}px;
+  border-radius: ${theme.borderRadius[0]}px;
   cursor: pointer;
   outline: none;
   font-family: ${theme.fonts[0]};

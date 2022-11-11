@@ -43,9 +43,9 @@ export const theme = {
   shadows: { buttonShadows, cardShadows, dropdownShadows },
   sizes: {
     spaces: [0, 5, 10, 20, 32],
-    fontSizes: [12, 14, 16, 18, 20, 22, 24, 30, 38, 46],
+    fontSizes: [12, 14, 16, 18, 20, 22, 24, 30, 32, 38, 46],
     fontWeight: [300, 400, 500, 600, 700, 800],
   },
-  borderRadius: 6,
+  borderRadius: [6, 10, 14, 18, 20],
   fonts,
 };
