@@ -34,15 +34,3 @@ export const StyledTab = styled.div<Omit<TabProps, 'children'> & { checked: bool
       border: ${!checked && `1px solid ${theme.colors.primary}`};
     `}
 `;
-
-export const StyledRightAddons = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
-`;
-
-export const StyledLeftAddons = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 5px;
-`;

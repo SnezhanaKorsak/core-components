@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { TabProps } from './types';
-import { StyledLeftAddons, StyledRightAddons, StyledTab } from './styled';
+import { StyledTab } from './styled';
+import { StyledLeftAddons, StyledRightAddons } from '../../common/styled';
 
 const Tab: React.FC<TabProps> = ({
   children,
