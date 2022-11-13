@@ -7,10 +7,13 @@ const helperBlue2 = '#607D94';
 const helperBlue3 = '#C9DCEC';
 const black = '#292D33';
 const grey = '#9497A1';
+const lightGrey = '#ECEFF2';
 const background = '#F1F6FA';
-const redError = '#C14040';
+const error = '#C14040';
+const errorBackground = '#F6E2E2';
 const white = '#FFFFFF';
 const light = 'rgba(255,255,255,0.4)';
+const disabled = '#B4B6BD';
 
 //fonts
 const fonts = ['Manrope, sans-serif', 'Open Sans, sans-serif'];
@@ -35,10 +38,13 @@ export const theme = {
     helperBlue3,
     black,
     grey,
+    lightGrey,
     white,
     light,
     background,
-    redError,
+    error,
+    errorBackground,
+    disabled,
   },
   shadows: { buttonShadows, cardShadows, dropdownShadows },
   sizes: {

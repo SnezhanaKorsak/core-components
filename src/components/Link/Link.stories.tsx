@@ -13,7 +13,7 @@ export default {
 const Template: ComponentStory<typeof Link> = (args) => {
   return (
     <Typography.Title level={7} weight="semibold">
-      <Link {...args}>Read more</Link>
+      <Link {...args} />
     </Typography.Title>
   );
 };
@@ -21,12 +21,14 @@ const Template: ComponentStory<typeof Link> = (args) => {
 export const Primary = Template.bind({});
 
 Primary.args = {
+  label: 'Read more',
   href: 'https://github.com/SnezhanaKorsak/core-components',
 };
 
 export const LeftAddons = Template.bind({});
 
 LeftAddons.args = {
+  label: 'Read more',
   href: 'https://github.com/SnezhanaKorsak/core-components',
   leftAddons: <TestIcon />,
 };
@@ -34,6 +36,7 @@ LeftAddons.args = {
 export const RightAddons = Template.bind({});
 
 RightAddons.args = {
+  label: 'Read more',
   href: 'https://github.com/SnezhanaKorsak/core-components',
   rightAddons: <TestIcon />,
 };

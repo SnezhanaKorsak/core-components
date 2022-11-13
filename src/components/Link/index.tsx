@@ -2,10 +2,10 @@ import React from 'react';
 
 import { LinkProps } from './types';
 import { StyledLink } from './styled';
-import { StyledLeftAddons, StyledRightAddons } from '../../common/styled';
+import { Content } from '../../common/styled';
 
 const Link: React.FC<LinkProps> = ({
-  children,
+  label,
   href,
   isActive = false,
   disabled = false,
@@ -15,9 +15,9 @@ const Link: React.FC<LinkProps> = ({
 }) => {
   return (
     <StyledLink href={href} isActive={isActive} block={block} disabled={disabled}>
-      {leftAddons && <StyledLeftAddons>{leftAddons}</StyledLeftAddons>}
-      {children}
-      {rightAddons && <StyledRightAddons>{rightAddons}</StyledRightAddons>}
+      {leftAddons}
+      {label && <Content>{label}</Content>}
+      {rightAddons}
     </StyledLink>
   );
 };

@@ -2,10 +2,10 @@ import React from 'react';
 
 import { TabProps } from './types';
 import { StyledTab } from './styled';
-import { StyledLeftAddons, StyledRightAddons } from '../../common/styled';
+import { Content } from '../../common/styled';
 
 const Tab: React.FC<TabProps> = ({
-  children,
+  label,
   checked = true,
   variant = 'default',
   leftAddons,
@@ -18,9 +18,9 @@ const Tab: React.FC<TabProps> = ({
 
   return (
     <StyledTab variant={variant} checked={checked} onClick={handleClick} {...restProps}>
-      {leftAddons && <StyledLeftAddons>{leftAddons}</StyledLeftAddons>}
-      {children}
-      {rightAddons && <StyledRightAddons>{rightAddons}</StyledRightAddons>}
+      {leftAddons}
+      {label && <Content>{label}</Content>}
+      {rightAddons}
     </StyledTab>
   );
 };

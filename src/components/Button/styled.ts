@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { theme } from '../../theme';
 import { ButtonProps } from './types';
 
-export const StyledButton = styled.button<Omit<ButtonProps, 'children' | 'ref'>>`
+export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,15 +56,15 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'children' | 'ref'>>
   ${({ size }) =>
     size == 's' &&
     css`
-      min-width: 137px;
-      min-height: 44px;
+      min-width: 125px;
+      min-height: 54px;
       padding: 0 8px;
     `}
   ${({ size }) =>
     size == 'm' &&
     css`
       min-width: 168px;
-      min-height: 44px;
+      min-height: 54px;
       padding: 0 12px;
     `}
   ${({ size }) =>

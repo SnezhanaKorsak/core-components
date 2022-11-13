@@ -3,7 +3,7 @@ import { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
 type DefaultDivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export type TabProps = DefaultDivProps & {
-  children: ReactNode;
+  label: string;
   size?: 'm' | 'l';
   variant?: 'alt' | 'default';
   leftAddons?: ReactNode;
