@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-  margin: 0 5px;
+export const LeftAddons = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+`;
+
+export const RightAddons = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
 `;

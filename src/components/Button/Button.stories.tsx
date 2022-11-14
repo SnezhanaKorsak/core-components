@@ -37,8 +37,8 @@ const Template3: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const ButtonIcon = Template3.bind({});
 
 ButtonIcon.args = {
+  label: <TestIcon />,
   view: 'primary',
   size: 'xs',
   block: false,
-  leftAddons: <TestIcon />,
 };

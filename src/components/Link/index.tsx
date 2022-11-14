@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LinkProps } from './types';
 import { StyledLink } from './styled';
-import { Content } from '../../common/styled';
+import { LeftAddons, RightAddons } from '../../common/styled';
 
 const Link: React.FC<LinkProps> = ({
   label,
@@ -15,9 +15,9 @@ const Link: React.FC<LinkProps> = ({
 }) => {
   return (
     <StyledLink href={href} isActive={isActive} block={block} disabled={disabled}>
-      {leftAddons}
-      {label && <Content>{label}</Content>}
-      {rightAddons}
+      {leftAddons && <LeftAddons>{leftAddons}</LeftAddons>}
+      {label}
+      {rightAddons && <RightAddons>{rightAddons}</RightAddons>}
     </StyledLink>
   );
 };

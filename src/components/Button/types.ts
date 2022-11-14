@@ -6,7 +6,7 @@ type DefaultButtonProps = DetailedHTMLProps<
 >;
 
 export type ButtonProps = DefaultButtonProps & {
-  label: string;
+  label: string | ReactNode;
   view?: 'primary' | 'outlined' | 'link';
   size?: 'xs' | 's' | 'm' | 'l';
   block?: boolean;

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type LinkProps = {
-  label: string;
+  label: string | ReactNode;
   href: string;
   isActive?: boolean;
   block?: boolean;

@@ -81,7 +81,7 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
     css`
       min-width: 84px;
       min-height: 54px;
-      padding: 15px 30px;
+      padding: 0 30px;
     `}
   
   ${({ block }) =>

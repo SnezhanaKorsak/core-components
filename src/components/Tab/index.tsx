@@ -2,7 +2,7 @@ import React from 'react';
 
 import { TabProps } from './types';
 import { StyledTab } from './styled';
-import { Content } from '../../common/styled';
+import { LeftAddons, RightAddons } from '../../common/styled';
 
 const Tab: React.FC<TabProps> = ({
   label,
@@ -18,9 +18,9 @@ const Tab: React.FC<TabProps> = ({
 
   return (
     <StyledTab variant={variant} checked={checked} onClick={handleClick} {...restProps}>
-      {leftAddons}
-      {label && <Content>{label}</Content>}
-      {rightAddons}
+      {leftAddons && <LeftAddons>{leftAddons}</LeftAddons>}
+      {label}
+      {rightAddons && <RightAddons>{rightAddons}</RightAddons>}
     </StyledTab>
   );
 };

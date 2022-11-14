@@ -17,21 +17,9 @@ const Switch: React.FC<SwitchProps> = ({
     <StyledTrack size={size} variant={variant}>
       <input type="checkbox" onClick={clickHandler} checked={checked} hidden readOnly />
 
-      <Tab
-        label={label1}
-        size={size}
-        checked={checked}
-        variant={variant}
-        style={{ border: 'none' }}
-      />
+      <Tab label={label1} size={size} checked={checked} variant={variant} />
 
-      <Tab
-        label={label2}
-        size={size}
-        checked={!checked}
-        variant={variant}
-        style={{ border: 'none' }}
-      />
+      <Tab label={label2} size={size} checked={!checked} variant={variant} />
     </StyledTrack>
   );
 };

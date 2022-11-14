@@ -18,9 +18,7 @@ export const StyledTrack = styled.label<{ size?: 'm' | 'l'; variant?: 'alt' | 'd
           background-color: ${theme.colors.tertiary};
         `
       : css`
-          min-width: 82px;
+          min-width: 92px;
           min-height: 32px;
-          border-radius: ${theme.borderRadius[0]}px;
-          border: 1px solid ${theme.colors.primary};
         `}
 `;

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 
 type DefaultButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -6,7 +6,7 @@ type DefaultButtonProps = DetailedHTMLProps<
 >;
 
 export type CircleButtonProps = DefaultButtonProps & {
-  label: string;
+  label: string | ReactNode;
   view?: 'primary' | 'outlined';
   size?: 'small' | 'large';
 };
