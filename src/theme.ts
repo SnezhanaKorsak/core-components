@@ -5,6 +5,7 @@ const tertiary = '#F0F9FF';
 const helperBlue1 = '#F0F9FF';
 const helperBlue2 = '#607D94';
 const helperBlue3 = '#C9DCEC';
+const helperBlue4 = '#C5D5E1';
 const black = '#292D33';
 const grey = '#9497A1';
 const lightGrey = '#ECEFF2';
@@ -36,6 +37,7 @@ export const theme = {
     helperBlue1,
     helperBlue2,
     helperBlue3,
+    helperBlue4,
     black,
     grey,
     lightGrey,
