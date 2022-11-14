@@ -17,4 +17,6 @@ export const StyledText = styled.div<TextProps>`
   line-height: ${({ level }) => heightLine[level] || 24}px;
   font-family: ${theme.fonts[1]};
   letter-spacing: -0.015em;
+  color: ${({ color }) => color || 'inherit'};
+  text-align: ${({ textAlign }) => textAlign || 'inherit'};
 `;

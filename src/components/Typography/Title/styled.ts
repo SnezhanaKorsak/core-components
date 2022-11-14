@@ -18,4 +18,5 @@ export const StyledTitle = styled.div<TitleProps>`
   line-height: ${({ level }) => heightLine[level] || 30}px;
   font-family: ${theme.fonts[0]};
   letter-spacing: ${({ level }) => (level === 7 ? -0.01 : -0.015)}em;
+  color: ${({ color }) => color || 'inherit'};
 `;
