@@ -18,7 +18,7 @@ export const StyledTab = styled.div<Omit<TabProps, 'label'> & { checked: boolean
     checked ? `${theme.colors.primary}` : `${theme.colors.tertiary}`};
   font-family: ${theme.fonts[0]};
   font-weight: ${({ checked }) =>
-    checked ? `${theme.sizes.fontWeight[3]}` : `${theme.sizes.fontWeight[2]}`};
+    checked ? `${theme.fontWeight.semibold}` : `${theme.fontWeight.medium}`};
   font-size: ${theme.sizes.fontSizes[1]}px;
   color: ${({ checked }) => (checked ? `${theme.colors.white}` : `${theme.colors.black}`)};
   letter-spacing: -0.01em;
@@ -33,7 +33,7 @@ export const StyledTab = styled.div<Omit<TabProps, 'label'> & { checked: boolean
       border-radius: ${theme.borderRadius[0]}px;
       background-color: ${checked ? `${theme.colors.primary}` : `${theme.colors.white}`};
       color: ${checked ? `${theme.colors.white}` : `${theme.colors.primary}`};
-      font-weight: ${theme.sizes.fontWeight[3]};
+      font-weight: ${theme.fontWeight.semibold};
       border: ${!checked && `1px solid ${theme.colors.primary}`};
     `}
 `;

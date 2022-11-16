@@ -18,6 +18,13 @@ const disabled = '#B4B6BD';
 
 //fonts
 const fonts = ['Manrope, sans-serif', 'Open Sans, sans-serif'];
+const fontWeight = {
+  extrabold: 800,
+  bold: 700,
+  semibold: 600,
+  medium: 500,
+  regular: 400,
+};
 
 // shadows
 
@@ -52,8 +59,8 @@ export const theme = {
   sizes: {
     spaces: [0, 5, 10, 20, 32],
     fontSizes: [12, 14, 16, 18, 20, 22, 24, 30, 32, 38, 46],
-    fontWeight: [300, 400, 500, 600, 700, 800],
   },
   borderRadius: [6, 10, 14, 18, 20],
   fonts,
+  fontWeight,
 };

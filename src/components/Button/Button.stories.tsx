@@ -10,7 +10,10 @@ export default {
   component: Button,
 } as unknown as ComponentMeta<typeof Button>;
 
-const Template1: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template1: ComponentStory<typeof Button> = (args) => {
+  const click = () => console.log('check');
+  return <Button onClick={click} {...args} />;
+};
 export const Primary = Template1.bind({});
 
 Primary.args = {

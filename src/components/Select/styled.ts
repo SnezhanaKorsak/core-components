@@ -6,7 +6,7 @@ export const Wrapper = styled.div<{ block?: boolean }>`
   box-sizing: border-box;
   width: ${({ block }) => (block ? '100%' : '328px')};
   font-size: ${theme.sizes.fontSizes[1]}px;
-  font-weight: ${theme.sizes.fontWeight[3]};
+  font-weight: ${theme.fontWeight.semibold};
   line-height: ${theme.sizes.fontSizes[6]}px;
   font-family: ${theme.fonts[1]};
   letter-spacing: 0.015em;
@@ -28,7 +28,7 @@ export const SelectContainer = styled.div<{ visibleOptions?: number }>`
     visibleOptions ? css`calc(44px * ${visibleOptions})` : 'auto'};
   overflow: auto;
   font-family: ${theme.fonts[0]};
-  font-weight: ${theme.sizes.fontWeight[2]};
+  font-weight: ${theme.fontWeight.medium};
   border-radius: 0 0 ${theme.borderRadius[0]}px ${theme.borderRadius[0]}px;
   background-color: ${theme.colors.background};
 `;

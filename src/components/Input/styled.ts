@@ -7,26 +7,26 @@ const fontStyles = css`
   font-family: ${theme.fonts[1]};
   font-size: ${theme.sizes.fontSizes[1]}px;
   line-height: ${theme.sizes.fontSizes[6]}px;
-  font-weight: ${theme.sizes.fontWeight[3]};
+  font-weight: ${theme.fontWeight.semibold};
   color: ${theme.colors.black};
   letter-spacing: 0.015em;
 `;
 
 const placeholderStyles = css`
   &::-webkit-input-placeholder {
-    font-weight: ${theme.sizes.fontWeight[1]};
+    font-weight: ${theme.fontWeight.regular};
   }
 
   &:-moz-placeholder {
-    font-weight: ${theme.sizes.fontWeight[1]};
+    font-weight: ${theme.fontWeight.regular};
   }
 
   &::-moz-placeholder {
-    font-weight: ${theme.sizes.fontWeight[1]};
+    font-weight: ${theme.fontWeight.regular};
   }
 
   &::placeholder {
-    font-weight: ${theme.sizes.fontWeight[1]};
+    font-weight: ${theme.fontWeight.regular};
   }
 `;
 
@@ -79,7 +79,7 @@ export const RowContainer = styled.div<{ disabled?: boolean; error?: boolean }>`
 export const Hint = styled.div`
   height: 24px;
   font-family: ${theme.fonts[1]};
-  font-weight: ${theme.sizes.fontWeight[3]};
+  font-weight: ${theme.fontWeight.semibold};
   font-size: ${theme.sizes.fontSizes[0]}px;
   line-height: ${theme.sizes.fontSizes[6]}px;
   color: inherit;

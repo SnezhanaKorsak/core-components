@@ -11,7 +11,6 @@ export default {
 
 const Template: ComponentStory<typeof Tab> = (args) => {
   const [checked, setChecked] = useState(true);
-
   return <Tab checked={checked} setChecked={setChecked} {...args} />;
 };
 

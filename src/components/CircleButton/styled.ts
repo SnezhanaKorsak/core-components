@@ -18,7 +18,7 @@ export const StyledButton = styled.button<Omit<CircleButtonProps, 'label' | 'ref
   font-family: ${theme.fonts[0]};
   font-size: ${({ size }) =>
     size === 'large' ? `${theme.sizes.fontSizes[1]}` : `${theme.sizes.fontSizes[0]}`}px;
-  font-weight: ${theme.sizes.fontWeight[3]};
+  font-weight: ${theme.fontWeight.semibold};
   line-height: ${theme.sizes.fontSizes[6]}px;
   color: ${({ view }) =>
     view === 'primary' ? `${theme.colors.white}` : `${theme.colors.primary}`};

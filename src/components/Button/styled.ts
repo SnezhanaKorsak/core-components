@@ -15,7 +15,7 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
   outline: none;
   font-family: ${theme.fonts[0]};
   font-size: ${theme.sizes.fontSizes[1]}px;
-  font-weight: ${theme.sizes.fontWeight[3]};
+  font-weight: ${theme.fontWeight.semibold};
   line-height: ${theme.sizes.fontSizes[6]}px;
   color: ${theme.colors.black};
 
@@ -74,7 +74,7 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
       min-height: 54px;
       padding: 0 16px;
       font-size: ${theme.sizes.fontSizes[2]}px;
-      font-weight: ${theme.sizes.fontWeight[4]};
+      font-weight: ${theme.fontWeight.bold};
     `}
   ${({ size }) =>
     size == 'xs' &&
@@ -99,9 +99,4 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
     box-shadow: none;
     cursor: not-allowed;
   }
-`;
-
-export const Item = styled.span`
-  display: flex;
-  margin: 0 5px;
 `;
