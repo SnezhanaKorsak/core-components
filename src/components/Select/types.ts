@@ -1,13 +1,8 @@
 import { ReactNode } from 'react';
 
-export type SelectItem = {
-  id: string | number;
-  content: string | number | ReactNode;
-};
-
 export type SelectProps = {
+  children: ReactNode;
   label: string | ReactNode;
-  options: SelectItem[];
   block?: boolean;
   visibleOptions?: number;
   disabled: boolean;

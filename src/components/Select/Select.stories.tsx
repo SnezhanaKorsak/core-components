@@ -16,11 +16,16 @@ export default {
   component: Select,
 } as unknown as ComponentMeta<typeof Select>;
 
-const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
+const Template: ComponentStory<typeof Select> = (args) => (
+  <Select {...args}>
+    {options.map(({ id, content }) => (
+      <React.Fragment key={id}>{content}</React.Fragment>
+    ))}
+  </Select>
+);
 
 export const Default = Template.bind({});
 
 Default.args = {
   label: 'All categories',
-  options: options,
 };

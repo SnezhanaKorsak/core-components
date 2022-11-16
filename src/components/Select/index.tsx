@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, ReactNode, Children } from 'react';
 import { SelectProps } from './types';
 import { StyledCollapseIcon, SelectMenu, Wrapper, Item, SelectContainer } from './styled';
 
@@ -6,8 +6,8 @@ import expandMoreIcon from '../../assets/icons/expand_more.svg';
 import expandLessIcon from '../../assets/icons/expand_less.svg';
 
 const Select: React.FC<SelectProps> = ({
+  children,
   label,
-  options,
   block,
   visibleOptions,
   disabled,
@@ -16,16 +16,24 @@ const Select: React.FC<SelectProps> = ({
   const [expanded, setExpanded] = useState(false);
   const [selectedItem, setSelectedItem] = useState(label);
 
-  const visibleOptionsCount =
-    visibleOptions && visibleOptions > options.length ? options.length + 1 : visibleOptions;
-
-  const clickHandler = () => !disabled && setExpanded(!expanded);
+  const childrenCount = Children.count(children);
 
   const changeSelectedItem = (value: string | number | ReactNode) => () => {
     setSelectedItem(value);
 
     changeHandler && changeHandler(value);
   };
+
+  const mappedOptions = Children.map(children, (child) => (
+    <Item active={selectedItem === child} onClick={changeSelectedItem(child)}>
+      {child}
+    </Item>
+  ));
+
+  const visibleOptionsCount =
+    visibleOptions && visibleOptions > childrenCount ? childrenCount + 1 : visibleOptions;
+
+  const clickHandler = () => !disabled && setExpanded(!expanded);
 
   const setInitialValue = () => setSelectedItem(label);
 
@@ -48,11 +56,7 @@ const Select: React.FC<SelectProps> = ({
             {label}
           </Item>
 
-          {options.map(({ id, content }) => (
-            <Item key={id} active={selectedItem === content} onClick={changeSelectedItem(content)}>
-              {content}
-            </Item>
-          ))}
+          {mappedOptions}
         </SelectContainer>
       )}
     </Wrapper>
