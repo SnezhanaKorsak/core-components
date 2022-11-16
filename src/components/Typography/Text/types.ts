@@ -6,6 +6,7 @@ type DefaultDivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDiv
 
 export type TextProps = DefaultDivProps & {
   level: typeof data[number];
+  font?: string;
   weight?: 'extrabold' | 'bold' | 'semibold' | 'medium' | 'regular';
   color?: string;
   textAlign?:

@@ -18,7 +18,7 @@ export const StyledTitle = styled.div<TitleProps>`
   font-size: ${({ level }) => fontSizes[level] || 20}px;
   font-weight: ${({ weight }) => (weight ? theme.fontWeight[weight] : 500)};
   line-height: ${({ level }) => heightLine[level] || 30}px;
-  font-family: ${theme.fonts[0]};
+  font-family: ${({ font }) => font && 'inherit'};
   letter-spacing: ${({ level }) => (level === 7 ? -0.01 : -0.015)}em;
   color: ${({ color }) => color || 'inherit'};
 `;

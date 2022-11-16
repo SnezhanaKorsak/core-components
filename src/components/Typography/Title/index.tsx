@@ -3,13 +3,13 @@ import { TitleProps } from './types';
 import { StyledTitle } from './styled';
 
 const Title: React.FC<TitleProps & { children: ReactNode }> = ({
+  children,
   level,
   weight = 'bold',
-  color,
-  children,
+  ...restProps
 }) => {
   return (
-    <StyledTitle level={level} weight={weight} color={color}>
+    <StyledTitle level={level} weight={weight} {...restProps}>
       {children}
     </StyledTitle>
   );

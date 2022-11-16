@@ -1,6 +1,8 @@
-import { ReactNode } from 'react';
+import { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export type LinkProps = {
+type DefaultLinkProps = DetailedHTMLProps<HTMLAttributes<HTMLLinkElement>, HTMLLinkElement>;
+
+export type LinkProps = DefaultLinkProps & {
   label: string | ReactNode;
   href: string;
   isActive?: boolean;
